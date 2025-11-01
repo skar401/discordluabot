@@ -1,0 +1,11 @@
+{
+  "name": "discord-lua-bot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.8",
+    "discord.js": "^14.16.0",
+    "dotenv": "^16.4.5"
+  }
+}
