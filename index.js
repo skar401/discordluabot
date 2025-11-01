@@ -24,9 +24,11 @@ client.once(Events.ClientReady, async (c) => {
       { body: [command.toJSON()] }
     );
     console.log('✅ Slash command registered!');
-  } catch (err) {
-    console.error('❌ Command registration failed:', err);
-  }
+} catch (err) {
+  console.error("Pastebin error:", err.response ? err.response.data : err.message);
+  await interaction.followUp(`❌ Error uploading to Pastebin:\n\`\`\`${err.response ? err.response.data : err.message}\`\`\``);
+}
+
 });
 
 // Handle /script command
